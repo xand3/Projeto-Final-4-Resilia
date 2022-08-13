@@ -16,5 +16,13 @@
   "bugs": {
     "url": "https://github.com/xand3/Projeto-Final-4-Resilia/issues"
   },
-  "homepage": "https://github.com/xand3/Projeto-Final-4-Resilia#readme"
+  "homepage": "https://github.com/xand3/Projeto-Final-4-Resilia#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "sqlite": "^4.1.2",
+    "sqlite3": "^5.0.11"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
 }
