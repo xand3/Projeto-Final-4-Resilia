@@ -1,0 +1,20 @@
+{
+  "name": "projetofinal4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xand3/Projeto-Final-4-Resilia.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xand3/Projeto-Final-4-Resilia/issues"
+  },
+  "homepage": "https://github.com/xand3/Projeto-Final-4-Resilia#readme"
+}
