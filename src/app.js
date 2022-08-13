@@ -1,13 +1,11 @@
 import express from "express";
-import { createAluno } from "./controllers/aluno.js";
+import { rmSync } from "fs";
+import { createAluno, deleteAluno, insertAluno, selectAluno, selectAlunos, updateAluno } from "./controllers/aluno.js";
 
 const app = express()
 app.use(express.json())
 
-createAluno()
 
-
-
-app.listen(3000,()=>{
+app.listen(3000, () => {
     console.log("api rodando")
 })
