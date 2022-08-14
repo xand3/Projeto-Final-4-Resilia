@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { deleteAluno, insertAluno, selectAluno, selectAlunos, updateAluno } from "../controllers/aluno";
-
+import { createDocente, insertDocente } from "../controllers/docente";
 
 const router = Router();
 
