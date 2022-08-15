@@ -6,3 +6,14 @@ export async function createCoordenacao() {
     });
 }
 
+export async function insertCoordenacao(coordenacao) {
+    openDb().then((db) => {
+        db.run("INSERT INTO coordenacao (email, id_turma, id_docente, cpf, nascimento) VALUES (?, ?, ?, ?, ?)", [coordenacao.email, coordenacao.id_turma, coordenacao.id_docente, coordenacao.cpf, coordenacao.nascimento])
+    })
+}
+
+export async function updateCoordenacao(coordenacao) {
+    openDb().then((db) => {
+        db.run("UPDATE coordenacao SET email=?, id_turma=?, id_docente=?, cpf=?, nascimento=? WHERE id=?", [coordenacao.email, coordenacao.id_turma, coordenacao.id_docente, coordenacao.cpf, coordenacao.nascimento, coordenacao.id])
+    })
+}
