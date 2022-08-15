@@ -11,6 +11,7 @@ import {
   insertDocente,
   selectDocente,
   selectDocentes,
+  deleteDocente
 } from "../controllers/docente";
 import { insertMatricula, selectMatricula, selectMatriculaFromID } from "../controllers/matricula";
 import { insertTurma, selectTurma, selectTurmaFromID } from "../controllers/turma";

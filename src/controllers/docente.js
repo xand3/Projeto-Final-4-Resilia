@@ -19,7 +19,8 @@ export async function selectDocentes(req, res) {
     })
 }
 
-export async function insertDocente(docente) {
+export async function insertDocente(req, res) {
+    let docente = req.body
     openDb().then((db) => {
         db.run("INSERT INTO docente (email, nome, nascimento, id_turma, cpf) VALUES (?, ?, ?, ?, ?)", [docente.email, docente.nome, docente.nascimento, docente.id_turma, docente.cpf])
     })
