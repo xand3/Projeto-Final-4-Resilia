@@ -12,9 +12,10 @@ export async function selectDocente(docente) {
     })
 }
 
-export async function selectDocentes() {
-    return openDb().then(db => {
-        return db.all("SELECT * FROM docente").then(res => res)
+export async function selectDocentes(req, res) {
+    openDb().then(db => {
+        db.all("SELECT * FROM docente")
+        .then(docente => res.json(docente))
     })
 }
 
