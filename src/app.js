@@ -3,6 +3,7 @@ import { rmSync } from "fs";
 import { createAluno, deleteAluno, insertAluno, selectAluno, selectAlunos, updateAluno } from "./controllers/aluno.js";
 import { createDocente, insertDocente } from "./controllers/docente.js";
 import { createCoordenacao, insertCoordenacao, updateCoordenacao } from "./controllers/coordenacao.js";
+import router from './routes/routes.js'
 
 createDocente()
 
@@ -10,7 +11,7 @@ createCoordenacao()
 
 const app = express()
 app.use(express.json())
-
+app.use(router)
 
 app.post('/coordenacao', (req, res) => {
     insertCoordenacao(req.body)

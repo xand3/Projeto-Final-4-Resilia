@@ -2,6 +2,7 @@ import { application, Router } from "express";
 import { deleteAluno, insertAluno, selectAluno, selectAlunos, updateAluno } from "../controllers/aluno";
 import { createDocente, insertDocente, selectDocente, selectDocentes } from "../controllers/docente";
 
+createDocente()
 const router = Router();
 
 router.get('/',(req,res)=>{
