@@ -24,3 +24,13 @@ export async function insertDocente(docente) {
         db.run("INSERT INTO docente (email, nome, nascimento, id_turma, cpf) VALUES (?, ?, ?, ?, ?)", [docente.email, docente.nome, docente.nascimento, docente.id_turma, docente.cpf])
     })
 }
+
+export async function deleteDocente(req, res) {
+    let id = req.body.id
+    openDb().then(db => {
+        db.get("DELETE FROM docente WHERE id=?", [id]).then((res) => res)
+    })
+    res.json({
+        "status": 200
+    })
+}

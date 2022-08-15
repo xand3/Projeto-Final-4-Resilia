@@ -21,5 +21,8 @@ router.delete('/pessoa',deleteAluno);
 // rotas para docente
 router.post('/docente', insertDocente)
 router.get('/docentes', selectDocentes)
+router.get("/docente", selectDocente)
+router.put("/docente", insertDocente)
+router.delete("/docente", deleteDocente)
 
 export default router
