@@ -11,10 +11,6 @@ createCoordenacao()
 const app = express()
 app.use(express.json())
 
-app.post('/docente', (req, res) => {
-    insertDocente(req.body)
-    res.json({"status": 200})
-})
 
 app.post('/coordenacao', (req, res) => {
     insertCoordenacao(req.body)
