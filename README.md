@@ -27,6 +27,11 @@ Para instalar todas as dependências necessárias utilize o comando
 ```
 npm install express sqlite sqlite3 uuid
 ```
+## Executando a API
+para executar a API use o seguinte comando:
+```
+npm start
+```
 
 ## Banco de dados
 Para fazer a modelagem do banco de dados utilizamos o site <a href = 'https://dbdiagram.io/home'>DBDiagram</a> excelente plataforma para modelar um banco de forma rápida
