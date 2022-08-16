@@ -5,16 +5,16 @@ import {
   selectAluno,
   selectAlunos,
   updateAluno,
-} from "../controllers/aluno";
+} from "../controllers/aluno.js";
 import {
   createDocente,
   insertDocente,
   selectDocente,
   selectDocentes,
   deleteDocente
-} from "../controllers/docente";
-import { insertMatricula, selectMatricula, selectMatriculaFromID } from "../controllers/matricula";
-import { insertTurma, selectTurma, selectTurmaFromID } from "../controllers/turma";
+} from "../controllers/docente.js";
+import { insertMatricula, selectMatricula, selectMatriculaFromID } from "../controllers/matricula.js";
+import { insertTurma, selectTurma, selectTurmaFromID } from "../controllers/turma.js";
 
 createDocente()
 const router = Router();

@@ -1,4 +1,4 @@
-import openDb from "../config/configDb";
+import openDb from "../config/configDb.js";
 
 export async function createMatricula() {
   openDb().then((db) => {
