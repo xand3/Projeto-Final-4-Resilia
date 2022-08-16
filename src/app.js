@@ -18,11 +18,7 @@ import { createDocente, insertDocente } from "./controllers/docente.js";
 import { createCoordenacao, insertCoordenacao, updateCoordenacao } from "./controllers/coordenacao.js";
 import router from './routes/routes.js'
 
-import {
-  createCoordenacao,
-  insertCoordenacao,
-  updateCoordenacao,
-} from "./controllers/coordenacao.js";
+
 import { createMatricula, insertMatricula } from "./controllers/matricula";
 import { createTurma, insertTurma } from "./controllers/turma.js";
 
