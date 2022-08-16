@@ -10,7 +10,7 @@ import routerDocente from "./routes/docenteRoutes.js"
 const app = express()
 app.use(express.json())
 
-app.use('/docente', routerDocente)
+app.use('/', routerDocente)
 
 app.use('/',routerAlunos);
 app.use('/',routerTurma);

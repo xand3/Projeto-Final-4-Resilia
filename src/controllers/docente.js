@@ -1,9 +1,9 @@
-import { response } from "express";
 import openDb from "../config/configDb.js";
 import Docente from "../models/docenteModel.js";
 
-export async function createDocente() {
-    openDb().then((db) => {
+export async function createDocente(req, res) {
+    openDb()
+    .then((db) => {
         db.exec("CREATE TABLE IF NOT EXISTS docente (id INTEGER PRIMARY KEY, email TEXT, nome TEXT, nascimento TEXT, id_turma INTEGER, cpf TEXT)");
     });
     res.sendStatus(200)
@@ -27,8 +27,8 @@ export async function insertDocente(req, res) {
 export async function selectDocente(req, res) {
     let id = req.body.id
     openDb().then(db => {
-        db.get("SELECT * FROM docente WHERE id=?", [id]).then((docente) => {
-            res.json(docente)
+        db.get("SELECT * FROM docente WHERE id=?", [id])
+        .then((docente) => {res.json(docente)
         })
     })
 }
