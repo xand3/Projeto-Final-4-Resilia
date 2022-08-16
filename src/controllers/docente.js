@@ -1,9 +1,25 @@
+import { response } from "express";
 import openDb from "../config/configDb.js";
+import Docente from "../models/docenteModel.js";
 
 export async function createDocente() {
     openDb().then((db) => {
         db.exec("CREATE TABLE IF NOT EXISTS docente (id INTEGER PRIMARY KEY, email TEXT, nome TEXT, nascimento TEXT, id_turma INTEGER, cpf TEXT)");
     });
+    res.sendStatus(200)
+}
+
+export async function insertDocente(req, res) {
+    
+    const {id, email, nome, nascimento, id_turma, cpf} = req.body
+
+    const docente = new Docente(id, email, nome, nascimento, id_turma, cpf)
+    
+    openDb()
+    .then(db => {
+        db.run("INSERT INTO docente (id, email, nome, nascimento, id_turma, cpf) VALUES (?,?,?,?,?,?)", [docente.id, docente.email, docente.nome, docente.nascimento, docente.id_turma, docente.cpf])
+    });
+    res.json({"status": 200})
 }
 
 export async function selectDocente(req, res) {
@@ -17,18 +33,11 @@ export async function selectDocente(req, res) {
 
 export async function selectDocentes(req, res) {
     openDb().then(db => {
-        db.all("SELECT * FROM docente")
-        .then(docente => res.json(docente))
+        db.all('SELECT * FROM docente')
+        .then(response => res.json(response))
     })
 }
 
-export async function insertDocente(req, res) {
-    let docente = req.body
-    openDb().then((db) => {
-        db.run("INSERT INTO docente (email, nome, nascimento, id_turma, cpf) VALUES (?, ?, ?, ?, ?)", [docente.email, docente.nome, docente.nascimento, docente.id_turma, docente.cpf])
-    });
-    res.json({"status": 200})
-}
 
 export async function deleteDocente(req, res) {
     let id = req.body.id

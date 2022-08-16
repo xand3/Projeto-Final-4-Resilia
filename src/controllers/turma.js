@@ -45,7 +45,6 @@ export async function selectTurmas(req, res) {
         db.all('SELECT * FROM turma')
             .then(response => res.json(response))
     })
-
 }
 
 export async function selectTurma(req, res) {
@@ -68,8 +67,6 @@ export async function deleteTurma(req,res) {
     res.json({
         "statusCode": 200
     })
-
-
 }
 
 
