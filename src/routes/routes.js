@@ -1,11 +1,5 @@
 import { application, Router } from "express";
-import {
-  deleteAluno,
-  insertAluno,
-  selectAluno,
-  selectAlunos,
-  updateAluno,
-} from "../controllers/aluno.js";
+
 import {
   createDocente,
   insertDocente,

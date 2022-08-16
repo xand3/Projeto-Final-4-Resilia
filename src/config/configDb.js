@@ -8,8 +8,3 @@ export default async function openDb() {
         driver:sqlite3.Database
     })
 }
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 4864117648facae9b7ef87981cee12d87d356579

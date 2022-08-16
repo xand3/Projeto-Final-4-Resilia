@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> 4864117648facae9b7ef87981cee12d87d356579
 import openDb from "../config/configDb.js";
 import Turma from "../models/turmaModels.js";
 
@@ -72,12 +68,11 @@ export async function deleteTurma(req,res) {
     res.json({
         "statusCode": 200
     })
-<<<<<<< HEAD
 
-}
-=======
+
 }
 
 
 
->>>>>>> 4864117648facae9b7ef87981cee12d87d356579
+
+
