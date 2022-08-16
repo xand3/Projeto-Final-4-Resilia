@@ -44,7 +44,7 @@ Para o banco de dados de uma Escola criamos as entidades: Coordenacao, Docente, 
 ## Rotas da API
 
 ### Docente
-### Para incluir um docente o endereço é 
+### Para incluir um docente o endereço é:
 ```
 http://localhost:3000/docente
 ```
@@ -58,7 +58,7 @@ e no corpo da requisição POST é preciso passar um JSON com as seguintes infor
 	"cpf":  "123"
 }
 ````
-### Para buscar um docente especifico pelo seu id use
+### Para buscar um docente especifico pelo seu id use:
 ```
 http://localhost:3000/docente
 ```
@@ -68,11 +68,27 @@ passando no corpo da requisição o seguinte JSON
 	"id": 1
 }
 ````
-### Para buscar todos os docentes use
+### Para buscar todos os docentes use:
 ```
 http://localhost:3000/docentes
 ```
-### para excluir um docente use
+### Para atualizar o cadastro de um docente use:
+```
+http://localhost:3000/docente
+```
+passando no corpo da requisição um JSON que informa o id de qual docente vai ser editado
+e as informações a serem editadas
+````json
+{
+	"id": 1,
+	"email": "novoemail.com",
+	"nome": "alexandre",
+	"nascimento": "21/12/2002",
+	"id_turma": "2",
+	"cpf":  "123"
+}
+````
+### para excluir um docente use:
 ```
 http://localhost:3000/docente
 ```
