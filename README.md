@@ -31,4 +31,4 @@ npm install express sqlite sqlite3 uuid
 ## Banco de dados
 Para fazer a modelagem do banco de dados utilizamos o site <a href = 'https://dbdiagram.io/home'>DBDiagram</a> excelente plataforma para modelar um banco de forma rápida
 abaixo segue o modelo que criamos:
-
+<img src="./img/modelagem-banco-de-dados.jpeg">
