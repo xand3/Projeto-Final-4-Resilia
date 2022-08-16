@@ -5,11 +5,12 @@ import { rmSync } from "fs";
 import routerAlunos from "./routes/alunoRoutes.js";
 import routerTurma from "./routes/turmaRoutes.js";
 
+import routerDocente from "./routes/docenteRoutes.js"
 
 const app = express()
 app.use(express.json())
 
-
+app.use('/docente', routerDocente)
 
 app.use('/',routerAlunos);
 app.use('/',routerTurma);

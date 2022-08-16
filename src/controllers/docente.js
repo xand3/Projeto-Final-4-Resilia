@@ -19,7 +19,9 @@ export async function insertDocente(req, res) {
     .then(db => {
         db.run("INSERT INTO docente (id, email, nome, nascimento, id_turma, cpf) VALUES (?,?,?,?,?,?)", [docente.id, docente.email, docente.nome, docente.nascimento, docente.id_turma, docente.cpf])
     });
-    res.json({"status": 200})
+    res.json({
+        "statusCode": 200
+    })
 }
 
 export async function selectDocente(req, res) {

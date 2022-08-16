@@ -1,2 +1,3 @@
 node_modules/
 src/data/dataBase.db
+rest.http

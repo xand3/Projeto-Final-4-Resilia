@@ -6,13 +6,11 @@ const routerDocente = Router();
 
 routerDocente.get("/", createDocente);
 
-// rotas para docente
 
 routerDocente.get('/docentes', selectDocentes)
 routerDocente.get("/docente", selectDocente)
 routerDocente.post('/docente', insertDocente)
 routerDocente.put("/docente", insertDocente)
 routerDocente.delete("/docente", deleteDocente)
-
 
 export default routerDocente;
