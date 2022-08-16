@@ -15,6 +15,7 @@ import {
 import { insertMatricula, selectMatricula, selectMatriculaFromID } from "../controllers/matricula";
 import { insertTurma, selectTurma, selectTurmaFromID } from "../controllers/turma";
 
+createDocente()
 const router = Router();
 
 router.get("/", (req, res) => {
@@ -32,8 +33,12 @@ router.put("/pessoa", updateAluno);
 router.delete("/pessoa", deleteAluno);
 
 // rotas para docente
-router.post("/docente", insertDocente);
-router.get("/docentes", selectDocentes);
+
+router.post('/docente', insertDocente)
+router.get('/docentes', selectDocentes)
+router.get("/docente", selectDocente)
+router.put("/docente", insertDocente)
+router.delete("/docente", deleteDocente)
 
 // rotas para matricula
 router.post("matricula", insertMatricula);
