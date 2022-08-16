@@ -40,6 +40,14 @@ export async function selectDocentes(req, res) {
     })
 }
 
+export async function updateDocente(req, res) {
+    const {id, email, nome, nascimento, id_turma, cpf} = req.body
+
+    openDb().then(db => {
+        db.run("UPDATE docente SET nome=?, email=?, nascimento=?, id_turma=?, cpf=? WHERE id=?", [nome, email, nascimento, id_turma, cpf, id])
+    })
+    res.json({"status": 200})
+}
 
 export async function deleteDocente(req, res) {
     let id = req.body.id
