@@ -1,10 +1,10 @@
 import express from "express";
 
 import { rmSync } from "fs";
-<<<<<<< HEAD
+
 import routerAlunos from "./routes/alunoRoutes.js";
 import routerTurma from "./routes/turmaRoutes.js";
-=======
+/*
 import {
   createAluno,
   deleteAluno,
@@ -16,7 +16,7 @@ import {
 import { createDocente, insertDocente } from "./controllers/docente.js";
 
 import { createCoordenacao, insertCoordenacao, updateCoordenacao } from "./controllers/coordenacao.js";
-import router from './routes/routes.js'
+import router from './routes/docenteRoutes.js'
 
 import {
   createCoordenacao,
@@ -32,13 +32,13 @@ createCoordenacao();
 createMatricula();
 createTurma();
 
->>>>>>> e04585ca221ba10e2cb0c477ac955acefd64865b
+*/
 
 const app = express()
 app.use(express.json())
-app.use(router)
 
-<<<<<<< HEAD
+
+
 app.use('/',routerAlunos);
 app.use('/',routerTurma);
 
@@ -48,9 +48,9 @@ app.use("/turma",routerTurma)
 app.listen(3000, () => {
     console.log("api rodando")
 })
-
+/*
 export default express
-=======
+
 app.post('/coordenacao', (req, res) => {
     insertCoordenacao(req.body)
     res.json({"status": 200})
@@ -101,4 +101,4 @@ app.post("/turma", (req, res) => {
 app.listen(3000, () => {
   console.log("api rodando");
 });
->>>>>>> e04585ca221ba10e2cb0c477ac955acefd64865b
+*/

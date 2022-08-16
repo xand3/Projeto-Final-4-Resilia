@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import openDb from "../config/configDb.js";
 import Turma from "../models/turmaModels.js";
 
@@ -19,7 +19,7 @@ export async function insertTurma(req, res) {
 
     openDb()
         .then(db => {
-            db.run("INSERT INTO turma (id,serie) VALUES (?,?)", [turma.id,turma.serie])
+            db.run("INSERT INTO turma (id,id_docente,serie,id_coordenacao) VALUES (?,?,?,?)", [turma.id,turma.id_docente,turma.serie,turma.id_coordenacao])
             
         })
         res.json({
@@ -28,13 +28,12 @@ export async function insertTurma(req, res) {
 }
 
 export async function updateTurma(req, res) {
+    
     const {id,id_docente,id_coordenacao,serie} = req.body;
-
-    const turma = new Turma(id,id_docente,id_coordenacao,serie)
-   
+   console.log(serie,id)
     openDb()
         .then(db => {
-            db.run("UPDATE turma SET serie =? WHERE id=?", [turma.serie,turma.id])
+            db.run("UPDATE turma SET serie =? WHERE id=?", [serie,id])
 
         })
     res.json({
@@ -72,30 +71,3 @@ export async function deleteTurma(req,res) {
     })
 
 }
-=======
-import openDb from "../config/configDb";
-
-export async function createTurma() {
-  openDb().then(db => {
-    db.exec("CREATE TABLE IF NOT EXISTS turma (id INTEGER PRIMARY KEY, id_aluno INTEGER, id_turma INTEGER, status TEXT) ")
-  })
-}
-
-export async function selectTurmaFromID(turma) {
-  openDb().then(db => {
-    db.run("SELECT * FROM turma WHERE id=?", [turma.id])
-  })
-}
-
-export async function selectTurma() {
-  return openDb().then(db => {
-    return db.all("SELECT * from turma").then(res => res)
-  })
-}
-
-export async function insertTurma(turma) {
-  openDb().then((db => {
-    db.run("INSERT INTO turma (id_aluno, id_docente, id_coordenacao, serie) VALUES (?, ?, ?, ?)", [turma.id_aluno, turma.id_docente, turma.id_coordenacao, turma.serie])
-  }))
-}
->>>>>>> e04585ca221ba10e2cb0c477ac955acefd64865b

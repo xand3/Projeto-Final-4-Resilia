@@ -28,13 +28,13 @@ export async function insertAluno(req, res) {
 }
 
 export async function updateAluno(req, res) {
-    const {nome,nascimento,id_turma} = req.body;
-
+    const {nome,nascimento,id_turma,id} = req.body;
+   
     const aluno = new Alunos(nome,nascimento,id_turma)
    
     openDb()
         .then(db => {
-            db.run("UPDATE aluno SET nome =? WHERE id=?", [aluno.nome, aluno.nascimento])
+            db.run("UPDATE aluno SET nome =? WHERE id=?", [aluno.nome, id])
 
         })
     res.json({
