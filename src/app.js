@@ -5,25 +5,13 @@ import { rmSync } from "fs";
 import routerAlunos from "./routes/alunoRoutes.js";
 import routerTurma from "./routes/turmaRoutes.js";
 
-import {
-  createAluno,
-  deleteAluno,
-  insertAluno,
-  selectAluno,
-  selectAlunos,
-  updateAluno,
-} from "./controllers/aluno.js";
-import { createDocente, insertDocente } from "./controllers/docente.js";
+import { createDocente} from "./controllers/docente.js";
 
 import { createCoordenacao, insertCoordenacao, updateCoordenacao } from "./controllers/coordenacao.js";
 import router from './routes/routes.js'
 
-import {
-  createCoordenacao,
-  insertCoordenacao,
-  updateCoordenacao,
-} from "./controllers/coordenacao.js";
-import { createMatricula, insertMatricula } from "./controllers/matricula";
+
+import { createMatricula, insertMatricula } from "./controllers/matricula.js";
 import { createTurma, insertTurma } from "./controllers/turma.js";
 
 
@@ -100,4 +88,3 @@ app.post("/turma", (req, res) => {
 app.listen(3000, () => {
   console.log("api rodando");
 });
-

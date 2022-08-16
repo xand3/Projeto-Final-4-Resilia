@@ -1,6 +1,7 @@
 import openDb from "../config/configDb.js";
 import Matricula from "../models/matriculaModel.js";
 
+
 export async function createMatricula(req, res) {
   openDb().then((db) => {
     db.exec(
