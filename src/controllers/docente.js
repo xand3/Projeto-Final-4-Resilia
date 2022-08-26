@@ -46,7 +46,10 @@ export async function updateDocente(req, res) {
     openDb().then(db => {
         db.run("UPDATE docente SET nome=?, email=?, nascimento=?, id_turma=?, cpf=? WHERE id=?", [nome, email, nascimento, id_turma, cpf, id])
     })
-    res.json({"status": 200})
+    res.json({
+        "status": 200,
+        "msg": "Atualização feita com sucesso"
+    })
 }
 
 export async function deleteDocente(req, res) {
@@ -55,6 +58,7 @@ export async function deleteDocente(req, res) {
         db.get("DELETE FROM docente WHERE id=?", [id]).then((res) => res)
     })
     res.json({
-        "status": 200
+        "status": 200,
+        "msg": "Docente deletado com sucesso"
     })
 }

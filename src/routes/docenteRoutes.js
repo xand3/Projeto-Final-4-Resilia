@@ -13,4 +13,10 @@ routerDocente.post('/docente', insertDocente)
 routerDocente.put("/docente", updateDocente)
 routerDocente.delete("/docente", deleteDocente)
 
+routerDocente.post("/cachorros", (req, res) => {
+    res.json({"status": 200})
+})
+
+
+
 export default routerDocente;
